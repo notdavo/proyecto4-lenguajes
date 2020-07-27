@@ -1,3 +1,4 @@
+var backend = `
 %asignaturas disponibles
 %nombre,tipo,creditos,semestre,tipo de lecciones
 asignatura(intro,laboratorio,4,1,4).
@@ -13,7 +14,7 @@ asignatura(lenguajes,laboratorio,4,4,4).
 asignatura(reque,normal,4,4,2).
 asignatura(administracion,normal,4,5,2).
 asignatura(compiladores,laboratorio,4,5,4).
-asignatura(diseño,laboratorio,4,5,4).
+asignatura(diseno,laboratorio,4,5,4).
 asignatura(electiva1,normal,4,6,2).
 asignatura(investigacion,normal,4,6,2).
 asignatura(principios,laboratorio,4,6,4).
@@ -185,3 +186,5 @@ disponibilidadUnDia(Nombre,Curso,Dia,Leccion1,Leccion2,Leccion3,Leccion4):-
 %
 %inicio consulta #2
 %
+
+`
