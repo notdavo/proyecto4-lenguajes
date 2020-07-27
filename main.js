@@ -17,3 +17,22 @@ while(result !== false){
         console.log(pl.format_answer(res))
     })
 }
+
+const tablaProfesoresRenderer = new HtmlRenderer('main')
+
+window.onload = () => {
+    setUpDatabase()
+
+    tablaProfesoresRenderer.renderProfesores([
+        { 
+            nombre: 'Milton',
+            apellido: 'Arce',
+            cedula: '209990888'
+        },{ 
+            nombre: 'Juan',
+            apellido: 'Rodriguez',
+            cedula: '208880777'
+        },
+    ])
+
+}

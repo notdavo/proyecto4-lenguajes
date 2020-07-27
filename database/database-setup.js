@@ -1,4 +1,4 @@
-window.onload = () => {
+let setUpDatabase = () => {
     if(!window.openDatabase) {
         alert('Este navegador no soporta el API WebSQL')
 
