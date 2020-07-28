@@ -3,8 +3,6 @@ class HtmlRenderer {
         this.mainTagId = mainTagId
     }
 
-
-
     renderProfesores = (profesores) => {
         let filas = ''
 
