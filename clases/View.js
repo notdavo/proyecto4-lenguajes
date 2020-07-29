@@ -1,5 +1,5 @@
 class View {
-    render = (htmlId, html) => {
+    render(htmlId, html) {
         const element = document.querySelector(`#${htmlId}`)
         
         element.innerHTML = html

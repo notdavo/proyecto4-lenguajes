@@ -1,3 +1,4 @@
+/*
 var session = pl.create()
 
 session.consult(backend)
@@ -19,9 +20,27 @@ while(result !== false){
 }
 
 const tablaProfesoresRenderer = new HtmlRenderer('main')
+*/
+
+
+
+const container = new ContainerController(new ContainerModel('container'), new ContainerView())
+const adminMenu = new AdminMenuController(new AdminMenuModel(), new AdminMenuView())
+const mainMenu = new MainMenuController(new MainMenuModel(), new MainMenuView())
+const consultaMenu = new ConsultaMenuController(new ConsultaMenuModel(), new ConsultaMenuView())
+
+const onClickConsulta = () => { container.changeContent(consultaMenu) }
+const onClickAdministrar = () => { container.changeContent(adminMenu) }
+const onAdminMenuClickAtras = () => { container.changeContent(mainMenu) }
+const onConsultaMenuClickAtras = () => { container.changeContent(mainMenu) }
+
+mainMenu.onClickConsulta = onClickConsulta
+mainMenu.onClickAdministrar = onClickAdministrar
+adminMenu.onClickAtras = onAdminMenuClickAtras
+consultaMenu.onClickAtras = onAdminMenuClickAtras
 
 window.onload = () => {
-    setUpDatabase()
+    /*setUpDatabase()
 
     tablaProfesoresRenderer.renderProfesores([
         { 
@@ -33,6 +52,7 @@ window.onload = () => {
             apellido: 'Rodriguez',
             cedula: '208880777'
         },
-    ])
+    ])*/
 
+    container.changeContent(mainMenu)
 }

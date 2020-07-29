@@ -5,15 +5,23 @@ class ContainerModel extends Model{
         this._contentController = null
     }
 
-    get getId() {
-        return super.getId()
+    getHtml = (args) => {
+        return `
+            <div id=${args.id}>
+                <div id='content'></div>
+            </div>
+        `
     }
 
-    get getContentController() {
+    getId = () => {
+        return Model.prototype.getId.call(this)
+    }
+
+    getContentController = () => {
         return this._contentController
     }
 
-    set setContentController(newContentController) {
+    setContentController = (newContentController) => {
         this._contentController = newContentController
     }
 }

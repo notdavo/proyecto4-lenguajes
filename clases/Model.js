@@ -3,7 +3,7 @@ class Model {
         this._htmlId = htmlId
     }
 
-    get getId() {
+    getId() {
         return this._htmlId
     }
 }
